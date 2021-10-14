@@ -1,101 +1,155 @@
 <template>
-  <div class="hello">
+  <div class="cards">
     <div class="pers-card">
-      <img alt="how" src="../assets/mandara.jpg" />
-      <h1>Карточка обо мне :)</h1>
-      <h4>Меня зовут Антон</h4>
-      <h4>Учусь в МИРЭА, группа БСБО-05-19</h4>
-      <h4>
-        Мои скиллы опишу цитатой: "Я как боксёр на ринге, ничего не вдупляю, но
+      <img alt=" " src="../assets/mandara.jpg" />
+      <h3>Карточка обо мне :)</h3>
+      <h4> </h4>
+      <p>Меня зовут Антон</p>
+      <p>Учусь в МИРЭА, группа БСБО-05-19</p>
+      <p>Мои скиллы опишу цитатой: "Я как боксёр на ринге, ничего не вдупляю, но
         готов ебашить"
-      </h4>
+      </p>
+
     </div>
     <div class="form-card">
       <form>
-      <div class="form-field">
-        <label for="name">Ваше имя</label>
-        <input type="text" id="name" required />
-      </div>
-      <div class="form-field">
-        <label for="name">Ваше email</label>
-        <input type="text" id="name" required />
-      </div>
-      <div class="form-field">
-        <label for="name">Ваш возраст</label>
-        <input type="text" id="name" required />
-      </div>
+        <img alt=" " src="../assets/sckr.jpg" />
+        <div class="form-field">
+          <h3>Расскажи о себе :)</h3>
+          <div class="name">
+            <label for="name1">Ваше имя</label>
+            <input type="text" id="name1" required />
+          </div>
+          <div class="email">
+            <label for="name2">Ваше email</label>
+            <input type="text" id="name2" required />
+          </div>
+          <div class="msg">
+            <label for="name3">Комметарий</label>
+            <input type="text" id="name3" required />
+          </div>
+        </div>
       <div class="submit-btn">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="ОТПРАВИТЬ" />
       </div>
-    </form>
+      </form>
     </div>
-    
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  props: ["msg"],
+  data() {},
+  methods() {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.cards img {
+  height: 200px;
+  width: 200px;
+  border-radius: 16px;
+}
 h3 {
-  margin: 40px 0 0;
+  margin: 10px;
+  text-align: center;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+h4 {
+  margin-top: 70px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+p {
+  text-align: justify;
+  margin-top: 5px;
 }
-a {
-  color: #42b983;
+.form-card h3 {
+  margin: 0px;
+}
+.form-card label {
+  float: left;
 }
 .form-field input {
   outline: none;
   border: 2px solid black;
-  border-radius: 12px;
-  padding: 8px 12px;
-  margin: 10px;
+  border-radius: 16px;
+  width: 43%;
 }
-.form-field label {
-  display: block;
+.form-field {
+  clear: both;
+  text-align: right;
+  line-height: 50px;
 }
+
+.form-field textarea {
+  border: 1px solid black;
+  border-radius: 16px;
+  clear: both;
+  text-align: right;
+}
+.name input{
+    clear:both;
+    margin: 10px;
+    padding: 8px 72px;
+}
+.name {
+  margin-top: 20px;
+}
+.email input{
+    clear:both; 
+    margin: 10px;
+    padding: 8px 72px;
+}
+.msg input{
+    clear:both; 
+    margin: 10px;
+    padding: 8px 72px;
+}
+
 .form-field input:focus,
 .form-field input:hover {
-  border-color: rgb(47, 179, 135);
+  border-color: rgb(194, 17, 126);
 }
 
 .pers-card {
-  border: 2px solid black;
-  border-radius: 12px;
+  height: 500px;
+  width: 500px;
+  border: 1px solid rgba(81, 50, 83, 0.63);
+  border-radius: 16px;
   padding: 16px 16px;
-  width: 50%;
-  height: 50%;
   margin: auto;
-  background-color: rgba(240, 174, 231, 0.623);
-  box-shadow: rgb(194, 17, 126) 10px 10px 30px;
-}
-h4 {
-  margin: 0;
-}
-.submit-btn input {
-  border: 2px solid black;
-  border-radius: 12px;
-}
-.submit-btn input:focus,
-.submit-btn input:hover {
-  border-color: rgb(47, 179, 135);
-  background-color: rgba(191, 245, 227, 0.555);
+  background-color: rgba(240, 174, 231, 0.377);
+  box-shadow: rgb(133, 133, 133) 20px 10px 40px;
 }
 .form-card {
-  margin-top: 3%;
+  height: 500px;
+  width: 500px;
+  border: 1px solid rgba(81, 50, 83, 0.63);
+  border-radius: 16px;
+  padding: 16px 16px;
+  margin: auto;
+  background-color: rgba(240, 174, 231, 0.377);
+  box-shadow: rgb(133, 133, 133) 20px 10px 40px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-btn input {
+  height: 30px;
+  width: 200px;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 24px;
+}
+
+.submit-btn input:hover {
+  border-color: rgb(194, 17, 126);
+  background-color: rgba(240, 174, 231, 0.623);
+  transform: scale(1.15);
 }
 </style>
