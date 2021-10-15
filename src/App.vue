@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg=""/>
+    <InfoPage/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InfoPage from './pages/InfoPage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InfoPage
   }
 }
 </script>
@@ -23,5 +23,9 @@ export default {
   text-align: center;
   color: #1f1820;
   margin-top: 60px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
 }
 </style> 

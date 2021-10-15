@@ -1,26 +1,10 @@
 <template>
-  <div class="cards">
-    <div class="pers-card">
-      <div class="img-wrapper">
-        <img alt=" " src="../assets/mandara.jpg" class = "mandara"/>
-        <img alt=" " src="../assets/naked_madara.jpg"  class = "naked_madara"/>
-      </div>
-      
-      <h3>Карточка обо мне :)</h3>
-      <h4></h4>
-      <p>Меня зовут Антон</p>
-      <p>Учусь в МИРЭА, группа БСБО-05-19</p>
-      <p>
-        Мои скиллы опишу цитатой: "Я как боксёр на ринге, ничего не вдупляю, но
-        готов ебашить"
-      </p>
-    </div>
-    <div class="form-card">
+<div class="form-card">
       <form>
-       <div class="img-wrapper">
+        <div class="img-wrapper">
           <img alt=" " src="../assets/sckr.jpg" class="scr" />
           <img alt=" " src="../assets/hnt.jpg" class="hnt" />
-       </div>
+        </div>
         <div class="form-field">
           <h3>Расскажи о себе :)</h3>
           <div class="name">
@@ -41,21 +25,17 @@
         </div>
       </form>
     </div>
-  </div>
 </template>
+
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: ["msg"],
-  data() {},
-  methods() {},
+  name: "formcard",
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
 
+<style scoped>
 .img-wrapper {
   position: relative;
   height: 200px;
@@ -71,18 +51,16 @@ export default {
   left: 150px;
 }
 
-.scr, .mandara {
+.scr {
   z-index: 11;
-  
 }
 
-.hnt, .naked_madara {
+.hnt{
   z-index: 10;
-  
 }
 
-.scr:hover, .mandara:hover {
- opacity: 0;
+.scr:hover {
+  opacity: 0;
 }
 
 .cards img {
@@ -93,9 +71,6 @@ export default {
 h3 {
   margin: 10px;
   text-align: center;
-}
-h4 {
-  margin-top: 70px;
 }
 p {
   text-align: justify;
@@ -119,12 +94,6 @@ p {
   line-height: 50px;
 }
 
-.form-field textarea {
-  border: 1px solid black;
-  border-radius: 16px;
-  clear: both;
-  text-align: right;
-}
 .name input {
   clear: both;
   margin: 10px;
@@ -148,8 +117,7 @@ p {
 .form-field input:hover {
   border-color: rgb(194, 17, 126);
 }
-
-.pers-card, .form-card {
+.form-card {
   height: 500px;
   width: 500px;
   border: 1px solid rgba(81, 50, 83, 0.63);
@@ -158,12 +126,6 @@ p {
   margin: auto;
   background-color: rgba(240, 174, 231, 0.377);
   box-shadow: rgb(133, 133, 133) 20px 10px 40px;
-}
-
-
-.cards {
-  display: flex;
-  flex-direction: row;
 }
 
 .submit-btn input {
@@ -180,3 +142,4 @@ p {
   transform: scale(1.15);
 }
 </style>
+ 
