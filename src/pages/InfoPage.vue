@@ -11,8 +11,6 @@ import infocard from "@/components/infocard.vue";
 export default {
   name: "InfoPage",
   props: ["msg"],
-  data() {},
-  methods() {},
   components: {
     formcard,
     infocard,

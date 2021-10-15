@@ -1,26 +1,26 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   meta: {
-  //     title: 'Список дел'
-  //   },
-  //   component: () => import('@/views/Home.vue')
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   meta: {
-  //     title: 'Информация'
-  //   },
-  //   component: () => import('@/views/About.vue')
-  // }
-]
+  {
+    path: '/',
+    name: 'HomePage',
+    meta: {
+      title: 'Список дел'
+    },
+    component: () => import('@/pages/HomePage')
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    meta: {
+      title: 'Информация'
+    },
+    component: () => import('@/pages/InfoPage')
+  }
+];
 
 const router = new VueRouter({
   mode: 'history',
@@ -28,4 +28,4 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+export default router;

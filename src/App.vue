@@ -1,22 +1,21 @@
 <template>
   <div id="app">
-    <InfoPage/>
+    <router-link to="/"> Домой </router-link> 
+    <a> | </a>
+    <router-link to="/info"> Инфо </router-link>
+    <router-view />
   </div>
 </template>
 
 <script>
-import InfoPage from './pages/InfoPage.vue'
-
 export default {
-  name: 'App',
-  components: {
-    InfoPage
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
-#app { 
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
