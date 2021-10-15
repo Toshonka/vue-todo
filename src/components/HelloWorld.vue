@@ -1,19 +1,26 @@
 <template>
   <div class="cards">
     <div class="pers-card">
-      <img alt=" " src="../assets/mandara.jpg" />
+      <div class="img-wrapper">
+        <img alt=" " src="../assets/mandara.jpg" class = "mandara"/>
+        <img alt=" " src="../assets/naked_madara.jpg"  class = "naked_madara"/>
+      </div>
+      
       <h3>Карточка обо мне :)</h3>
-      <h4> </h4>
+      <h4></h4>
       <p>Меня зовут Антон</p>
       <p>Учусь в МИРЭА, группа БСБО-05-19</p>
-      <p>Мои скиллы опишу цитатой: "Я как боксёр на ринге, ничего не вдупляю, но
+      <p>
+        Мои скиллы опишу цитатой: "Я как боксёр на ринге, ничего не вдупляю, но
         готов ебашить"
       </p>
-
     </div>
     <div class="form-card">
       <form>
-        <img alt=" " src="../assets/sckr.jpg" />
+       <div class="img-wrapper">
+          <img alt=" " src="../assets/sckr.jpg" class="scr" />
+          <img alt=" " src="../assets/hnt.jpg" class="hnt" />
+       </div>
         <div class="form-field">
           <h3>Расскажи о себе :)</h3>
           <div class="name">
@@ -29,9 +36,9 @@
             <input type="text" id="name3" required />
           </div>
         </div>
-      <div class="submit-btn">
-        <input type="submit" value="ОТПРАВИТЬ" />
-      </div>
+        <div class="submit-btn">
+          <input type="submit" value="ОТПРАВИТЬ" />
+        </div>
       </form>
     </div>
   </div>
@@ -48,6 +55,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.img-wrapper {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.img-wrapper img {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+  left: 150px;
+}
+
+.scr, .mandara {
+  z-index: 11;
+  
+}
+
+.hnt, .naked_madara {
+  z-index: 10;
+  
+}
+
+.scr:hover, .mandara:hover {
+ opacity: 0;
+}
 
 .cards img {
   height: 200px;
@@ -89,23 +125,23 @@ p {
   clear: both;
   text-align: right;
 }
-.name input{
-    clear:both;
-    margin: 10px;
-    padding: 8px 72px;
+.name input {
+  clear: both;
+  margin: 10px;
+  padding: 8px 72px;
 }
 .name {
   margin-top: 20px;
 }
-.email input{
-    clear:both; 
-    margin: 10px;
-    padding: 8px 72px;
+.email input {
+  clear: both;
+  margin: 10px;
+  padding: 8px 72px;
 }
-.msg input{
-    clear:both; 
-    margin: 10px;
-    padding: 8px 72px;
+.msg input {
+  clear: both;
+  margin: 10px;
+  padding: 8px 72px;
 }
 
 .form-field input:focus,
@@ -113,7 +149,7 @@ p {
   border-color: rgb(194, 17, 126);
 }
 
-.pers-card {
+.pers-card, .form-card {
   height: 500px;
   width: 500px;
   border: 1px solid rgba(81, 50, 83, 0.63);
@@ -123,16 +159,7 @@ p {
   background-color: rgba(240, 174, 231, 0.377);
   box-shadow: rgb(133, 133, 133) 20px 10px 40px;
 }
-.form-card {
-  height: 500px;
-  width: 500px;
-  border: 1px solid rgba(81, 50, 83, 0.63);
-  border-radius: 16px;
-  padding: 16px 16px;
-  margin: auto;
-  background-color: rgba(240, 174, 231, 0.377);
-  box-shadow: rgb(133, 133, 133) 20px 10px 40px;
-}
+
 
 .cards {
   display: flex;
