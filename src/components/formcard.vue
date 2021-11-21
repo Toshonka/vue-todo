@@ -1,4 +1,4 @@
-<template>
+<template> 
 <div class="form-card">
       <form>
         <div class="img-wrapper">
@@ -6,7 +6,7 @@
           <img alt=" " src="../assets/hnt.jpg" class="hnt" />
         </div>
         <div class="form-field">
-          <h3>Расскажи о себе :)</h3>
+          <h3>Расскажи о себе :) </h3>
           <div class="name">
             <label for="name1">Ваше имя</label>
             <input type="text" id="name1" required />
